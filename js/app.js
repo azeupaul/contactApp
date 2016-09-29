@@ -5,6 +5,7 @@ let app = new Vue({
 			name: "John Doe",
 			email: "john.doe@test.fr",
 			phone: 699999999
-		}]
+		}],
+		contact: {}
 	}
 })
