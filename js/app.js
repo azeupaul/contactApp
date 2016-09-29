@@ -1,6 +1,10 @@
 let app = new Vue({
 	el: "#app",
 	data: {
-		message: "Hello world"
+		contacts: [{
+			name: "John Doe",
+			email: "john.doe@test.fr",
+			phone: 699999999
+		}]
 	}
 })
