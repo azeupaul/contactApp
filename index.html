@@ -2,13 +2,30 @@
 <html>
 <head>
 	<title>VueJs Sample</title>
+	<meta charset="utf-8">
 </head>
 <body>
 	<div id="app">
+		<form @submit.prevent="save">
+			<p>
+				<label>Nom</label>
+				<input type="text" v-model="contact.name" />
+			</p>
+			<p>
+				<label>Téléphone</label>
+				<input type="text" v-model="contact.phone" />
+			</p>
+			<p>
+				<label>Email</label>
+				<input type="email" v-model="contact.email" />
+			</p>
+			
+			<button type="submit">Envoyer</button>
+		</form>
 		<div v-for="contact in contacts">
 			<h3>{{ contact.name }}</h3>
 			<dl>
-				<dt>Phone Number:</dt>
+				<dt>Téléphone:</dt>
 				<dd>{{ contact.phone }}</dd>
 				<dt>Email:</dt>
 				<dd>{{ contact.email }}</dd>
