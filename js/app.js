@@ -6,7 +6,7 @@ let app = new Vue({
 			email: "john.doe@test.fr",
 			phone: 699999999
 		}],
-		contact: {
+		addContact: {
 			name: "",
 			email: "",
 			phone: 0
@@ -14,11 +14,15 @@ let app = new Vue({
 	},
 	methods: {
 		save: function(){
-			if(this.contact.name){
-				this.contacts.push(this.contact)
-				this.contact.name = ""
-				this.contact.phone = 0
-				this.contact.email = ""
+			if(this.addContact.name){
+				this.contacts.push({
+					name: this.addContact.name,
+					email: this.addContact.email,
+					phone: this.addContact.phone
+				})
+				this.addContact.name = ""
+				this.addContact.phone = 0
+				this.addContact.email = ""
 			}
 		}
 	}
